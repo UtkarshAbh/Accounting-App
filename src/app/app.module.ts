@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { DxButtonModule, DxSelectBoxModule, DxTabsModule, DxTextBoxModule, DxValidatorModule } from 'devextreme-angular';
+import { DxButtonModule, DxFormModule, DxSelectBoxModule, DxTabsModule, DxTextBoxModule, DxValidatorModule } from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,7 +15,6 @@ import { LoggingInterceptor } from './Interceptor/logging.interceptor';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/home.component';
 import { PagNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SalesGuardGuard } from './Sales/sales-guard.guard';
 import { LoginComponent } from './Home/login/login.component';
 
 
@@ -33,17 +32,15 @@ import { LoginComponent } from './Home/login/login.component';
     AppRoutingModule,
     DxTabsModule,
     DxSelectBoxModule,
-    DxSelectBoxModule,
     DxValidatorModule,
     DxButtonModule,
     DxTextBoxModule,
-    DxValidatorModule,
-    
+    DxFormModule
   ],
+
   providers: [CustomerService,SupplierService,SalesService,
     {provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true},
-  {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},
-  SalesGuardGuard
+    {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })

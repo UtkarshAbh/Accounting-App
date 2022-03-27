@@ -11,6 +11,18 @@ import { CustomerService } from 'src/app/Services/customer.service';
 export class CustomerListComponent implements OnInit {
 
   customers: Customer[] = [];
+  customer: Customer = { 
+    name: '',
+    id: 0,
+    dateOfBirth: new Date,
+    gender: '',
+    address: '',
+    phoneNumber: 0,
+    email: '',
+    profession: '',
+    product: '',
+    productCategory: ''
+  }
 
   constructor(private _customerService: CustomerService,
               private _router: Router) { }
@@ -23,11 +35,19 @@ export class CustomerListComponent implements OnInit {
     )
   }
 
-  editButtonClick(customerId: number) {
-    this._router.navigate(['/customer/edit',customerId])
+
+  toggleAuth(){
+    if(localStorage.getItem('userType')== 'admin'){
+      return true;
+    }
+    return false;
   }
 
-  deleteButtonClick(customerId: number) {
-    this._customerService.deleteCustomer(customerId);
-  }
+
+//  save(rowData: {id: number}, e:any) {
+   
+//    this.customer = (e.component.find((cus: Customer) => cus.id == id))
+//    this._customerService.updateCustomer(this.customer).subscribe(data => console.log(data))
+//  }
+
 }

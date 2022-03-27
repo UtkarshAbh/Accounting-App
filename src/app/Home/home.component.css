@@ -1,0 +1,10 @@
+h3 {
+    display: flex;
+    min-width:1000px;
+    justify-content: center;
+}
+img {
+    display: flex;
+    min-width:1000px;
+    justify-content: center;
+}

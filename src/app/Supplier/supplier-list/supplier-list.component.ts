@@ -31,7 +31,12 @@ export class SupplierListComponent implements OnInit {
     this._supplierService.deleteSupplier(supplierId);
   }
 
- 
+  toggleAuth(){
+    if(localStorage.getItem('userType')== 'admin'){
+      return true;
+    }
+    return false;
+  }
 }
 
 

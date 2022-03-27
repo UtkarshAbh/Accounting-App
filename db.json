@@ -47,9 +47,20 @@
       "profession": "Student",
       "product": "Noodles, Perfume, Pens ",
       "productCategory": "Food, Cosmetics, Stationary "
+    },
+    {
+      "name": "Utkarhs",
+      "id": 5,
+      "dateOfBirth": "12/11/2000",
+      "gender": "male",
+      "address": "Delhi",
+      "phoneNumber": 123123,
+      "email": "utk@gmail.com",
+      "profession": "Student",
+      "product": "Rice, Biscuits",
+      "productCategory": "Food, Cereals"
     }
   ],
-
   "suppliers": [
     {
       "name": "Amul Dairy",
@@ -107,7 +118,6 @@
       "email": "rajdairy@rajfresh.com"
     }
   ],
-
   "sales": [
     {
       "productName": "Milk",
@@ -243,11 +253,10 @@
       "quantity": 65
     }
   ],
-
   "login": [
     {
-      "loginId": "Utkarsh@gmail.com",
-      "password": "utkarsh"
+      "loginId": "utkarsh@gmail.com",
+      "password": "password123"
     }
   ]
 }

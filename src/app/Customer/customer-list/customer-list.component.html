@@ -37,7 +37,31 @@
 </div> -->
 
 <br><br>
+
 <dx-data-grid
     [dataSource]="customers"
-    keyExpr="id">
+    keyExpr="id" 
+    [allowColumnReordering]="false"
+    [allowColumnResizing]="true"
+    sorting.mode="single"
+    paging.enabled="true"
+    [repaintChangesOnly]="true">
+    <dxo-editing
+    mode="form"
+    [allowUpdating]="toggleAuth()"
+    [allowDeleting]="toggleAuth()"
+    >
+</dxo-editing>
+    <dxo-paging [pageSize]="5"> </dxo-paging>
+    <dxo-sorting></dxo-sorting>
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="id"></dxi-column>
+    <dxi-column dataField="dateOfBirth"></dxi-column>
+    <dxi-column dataField="gender"></dxi-column>
+    <dxi-column dataField="address"></dxi-column>
+    <dxi-column dataField="phoneNumber"></dxi-column>
+    <dxi-column dataField="email"></dxi-column>
+    <dxi-column dataField="profession"></dxi-column>
+    <dxi-column dataField="product"></dxi-column>
+    <dxi-column dataField="productCategory"></dxi-column>
 </dx-data-grid>

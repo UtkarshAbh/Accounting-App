@@ -62,7 +62,8 @@
       </div>
     </div>
   </form> -->
-
+  <br><br>
+  <form (submit)="handleSubmit($event)">
   <dx-form [formData]="supplier">
     <dxi-item dataField="name" [isRequired]="true"></dxi-item>
     <dxi-item dataField="address" [isRequired]="true"></dxi-item>
@@ -71,5 +72,6 @@
     </dxi-validation-rule>
     <dxi-item dataField="phoneNumber" [isRequired]="true"></dxi-item>
     <dxi-item dataField="productCategory" [isRequired]="true"></dxi-item>
+    <dxi-item itemType="button" [buttonOptions]="submitButtonOptions"></dxi-item>
   </dx-form>
-  <dx-button (onClick)="onSubmit()">Save</dx-button>
+  </form>

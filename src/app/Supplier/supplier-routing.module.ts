@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RoleGuard } from '../Shared/role.guard';
 
 import { CreateSupplierComponent } from './create-supplier/create-supplier.component';
 import { SupplierListComponent } from './supplier-list/supplier-list.component';
 
 const routes: Routes = [
     { path: '', component: SupplierListComponent},
-    { path: 'create', component: CreateSupplierComponent},
-    { path: 'edit/:id', component: CreateSupplierComponent}
+    { path: 'create', component: CreateSupplierComponent,canActivate:[RoleGuard]},
+    { path: 'edit/:id', component: CreateSupplierComponent,canActivate:[RoleGuard]}
 ];
 
 @NgModule({

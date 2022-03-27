@@ -31,5 +31,16 @@
 <br><br>
 <dx-data-grid
     [dataSource]="suppliers"
-    keyExpr="id">
+    keyExpr="id"
+    [allowColumnReordering]="false"
+    [allowColumnResizing]="true"
+    sorting.mode="single"
+    paging.enabled="true">
+    <dxo-editing
+    mode="row"
+    [allowUpdating]="toggleAuth()"
+    [allowDeleting]="toggleAuth()">
+</dxo-editing>
+    <dxo-paging [pageSize]="5"> </dxo-paging>
+    <dxo-sorting></dxo-sorting>
 </dx-data-grid>

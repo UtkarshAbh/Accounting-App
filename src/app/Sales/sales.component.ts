@@ -13,21 +13,17 @@ export class SalesComponent implements OnInit {
 
   sales: Sales[] = [];
   events: Array<string> = [];
-  // value: number = 0;
 
   constructor(private salesService: SalesService,
-              private _router: Router) { }
+    private _router: Router) { }
 
   ngOnInit(): void {
     this.salesService.getSales().subscribe(
-      (listSales) => {this.sales = listSales,
-      (err: any) => console.log(err)
+      (listSales) => {
+        this.sales = listSales,
+        (err: any) => console.log(err)
       }
     )
-  }
-
-  editButtonClick(salesId: number) {
-    this._router.navigate(['/editSales',salesId])
   }
 
   deleteButtonClick(salesId: number) {
@@ -42,13 +38,15 @@ export class SalesComponent implements OnInit {
     this.events = [];
   }
 
-  netValue() {
-    this.sales.forEach((data) => {
-      return (+data.price)*(+data.quantity)
-    } )
-  }
-
   calculateSalesAmount(rowData: { price: number; quantity: number; }) {
     return (+rowData.price) * (+rowData.quantity);
-}
+  }
+
+  toggleAuth() {
+    if (localStorage.getItem('userType') == 'admin') {
+      return true;
+    }
+    return false;
+  }
+  
 }

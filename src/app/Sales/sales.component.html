@@ -11,9 +11,9 @@ editing.mode ="form">
 <dxo-paging [enabled]="true"></dxo-paging>
 <dxo-editing
 mode="form"
-[allowUpdating]="true"
-[allowDeleting]="true"
-[allowAdding]="true"
+[allowUpdating]="toggleAuth()"
+[allowDeleting]="toggleAuth()"
+[allowAdding]="toggleAuth()"
 >
 </dxo-editing>
 <dxi-column dataField="productName"></dxi-column>
