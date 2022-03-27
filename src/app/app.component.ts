@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DxTabsModule, DxSelectBoxModule } from 'devextreme-angular';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Accounting-App';
+
 }

@@ -1,0 +1,17 @@
+<form action="/Login" method="post">
+    <dx-text-box name="Login" placeholder="Enter Login Id">
+        <dx-validator>
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+        </dx-validator>
+    </dx-text-box>
+    <dx-text-box name="Password" mode="password" placeholder="Enter password">
+        <dx-validator>
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+        </dx-validator>
+    </dx-text-box>
+    <dx-button
+        text="Submit"
+        type="success"
+        [useSubmitBehavior]="true">
+    </dx-button>
+</form>

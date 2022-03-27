@@ -1,0 +1,75 @@
+<!-- <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+    <div class="panel panel-primary">
+      <div class="panel-heading my-2">
+        <h4 class="panel-title">{{pageTitle}}</h4>
+      </div>
+      <div class="panel-body">
+        <div class="form-group my-2" [ngClass]="{'text-warning': formErrors['name']}">
+          <label class="col-sm-2 control-label" for="name">Name</label>
+          <div class="col-sm-8">
+            <input id="name" type="text" class="form-control" formControlName="name" (blur)="logValidationErrors()">
+            <span class="help=block" *ngIf="formErrors['name']">
+              {{formErrors['name']}}
+          </span>
+          </div>
+        </div>
+
+        <div class="form-group my-2" [ngClass]="{'text-warning': formErrors['address']}">
+          <label class="col-sm-2 control-label" for="address">Address</label>
+          <div class="col-sm-8">
+            <input id="address" type="text" class="form-control" formControlName="address" (blur)="logValidationErrors()">
+            <span class="help=block" *ngIf="formErrors['address']">
+              {{formErrors['address']}}
+          </span>
+          </div>
+        </div>
+    
+        <div class="form-group my-2" [ngClass]="{'text-warning': formErrors['email']}">
+          <label class="col-sm-2 control-label" for="email">Email</label>
+          <div class="col-sm-8">
+            <input id="email" type="text" class="form-control" formControlName="email" (blur)="logValidationErrors()">
+            <span class="help=block" *ngIf="formErrors['email']">
+              {{formErrors['email']}}
+          </span>
+          </div>
+        </div>
+  
+        <div class="form-group my-2" [ngClass]="{'text-warning': formErrors['phoneNumber']}">
+          <label class="col-sm-2 control-label" for="phoneNumber">Phone Number</label>
+          <div class="col-sm-8">
+            <input id="phoneNumber" type="number" class="form-control" formControlName="phoneNumber" (blur)="logValidationErrors()"> 
+            <span class="help=block" *ngIf="formErrors['phoneNumber']">
+              {{formErrors['phoneNumber']}}
+          </span>
+          </div>
+        </div>
+  
+      
+
+        <div class="form-group my-2" [ngClass]="{'text-warning': formErrors['productCategory']}">
+          <label class="col-sm-2 control-label" for="productCategory">Product Category</label>
+          <div class="col-sm-8">
+            <input id="productCategory" type="text" class="form-control" formControlName="productCategory" (blur)="logValidationErrors()">
+            <span class="help=block" *ngIf="formErrors['productCategory']">
+              {{formErrors['productCategory']}}
+          </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="panel-footer my-2">
+        <button class="btn btn-dark " type="submit">Save</button>
+      </div>
+    </div>
+  </form> -->
+
+  <dx-form [formData]="supplier">
+    <dxi-item dataField="name" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="address" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="email" [isRequired]="true"></dxi-item>
+    <dxi-validation-rule type="email">
+    </dxi-validation-rule>
+    <dxi-item dataField="phoneNumber" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="productCategory" [isRequired]="true"></dxi-item>
+  </dx-form>
+  <dx-button (onClick)="onSubmit()">Save</dx-button>

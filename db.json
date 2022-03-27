@@ -1,0 +1,253 @@
+{
+  "customers": [
+    {
+      "name": "Manish ",
+      "id": 1,
+      "dateOfBirth": "10/04/1997",
+      "gender": "Male",
+      "address": "Khasmahal, Delhi",
+      "phoneNumber": 123457890,
+      "email": "manish@gmail.com",
+      "profession": "Engineer",
+      "product": "Dry Fruits, Milk, Eggs",
+      "productCategory": "Food, Dairy"
+    },
+    {
+      "name": "Suresh",
+      "id": 2,
+      "dateOfBirth": "11/12/1995",
+      "gender": "Male",
+      "address": "M G Road, Delhi-20",
+      "phoneNumber": 1230987259,
+      "email": "suresh@gmail.com",
+      "profession": "Student",
+      "product": "Chocolates, Cakes, Deodrant, Notebooks",
+      "productCategory": "Food, Cosmetics, Stationary"
+    },
+    {
+      "name": "Manisha",
+      "id": 3,
+      "dateOfBirth": "03/02/1999",
+      "gender": "Female",
+      "address": "PC Colony, Delhi-20",
+      "phoneNumber": 9872378192,
+      "email": "manisha@gmail.com",
+      "profession": "Consultant",
+      "product": "Milk, Flour, Nail Polish, Decor",
+      "productCategory": "Dairy, Cereals, Cosmetics, Decor"
+    },
+    {
+      "name": "Shruti",
+      "id": 4,
+      "dateOfBirth": "09/23/2004",
+      "gender": "Female",
+      "address": "Ashok Nagar, Delhi",
+      "phoneNumber": 7873443849,
+      "email": "shruti@gmail.com",
+      "profession": "Student",
+      "product": "Noodles, Perfume, Pens ",
+      "productCategory": "Food, Cosmetics, Stationary "
+    }
+  ],
+
+  "suppliers": [
+    {
+      "name": "Amul Dairy",
+      "id": 1,
+      "address": "Amul Dairy, Madangir, Delhi",
+      "productCategory": "Dairy",
+      "phoneNumber": 12344567890,
+      "email": "amulkbagh@amul.in"
+    },
+    {
+      "name": "AgroTech",
+      "id": 2,
+      "address": "AgroTech, Boring Road, Delhi",
+      "productCategory": "Food, Cereals, Crockery",
+      "phoneNumber": 12344567890,
+      "email": "agro@gmail.com"
+    },
+    {
+      "name": "City Fashions and Gifts",
+      "id": 3,
+      "address": "A-22, Ashok Rajpath, Delhi",
+      "productCategory": "Cosmetics, Gifts, Toys",
+      "phoneNumber": 12344567890,
+      "email": "amulkbagh@amul.in"
+    },
+    {
+      "name": "Gyan Bhandar",
+      "id": 4,
+      "address": "C-123, Pragati Maidan, Delhi",
+      "productCategory": "Stationary",
+      "phoneNumber": 12344567890,
+      "email": "gyanbhandarkbagh@gmail.in"
+    },
+    {
+      "name": "Mother Dairy ",
+      "id": 5,
+      "address": "A-18, Boring Road, Delhi",
+      "productCategory": [
+        "Food",
+        "Dairy",
+        "Cereals",
+        "Cosmetics"
+      ],
+      "phoneNumber": 12321,
+      "email": "motherdairy@gmail.com"
+    },
+    {
+      "name": "Raj Dairy",
+      "id": 6,
+      "address": "Ashok Nagar, Delhi",
+      "productCategory": [
+        "Dairy"
+      ],
+      "phoneNumber": 123243232,
+      "email": "rajdairy@rajfresh.com"
+    }
+  ],
+
+  "sales": [
+    {
+      "productName": "Milk",
+      "id": 1,
+      "productCategory": "Dairy",
+      "price": 30,
+      "quantity": 1000
+    },
+    {
+      "productName": "Curd",
+      "id": 2,
+      "productCategory": "Dairy",
+      "price": 40,
+      "quantity": 200
+    },
+    {
+      "productName": "Butter",
+      "id": 3,
+      "productCategory": "Dairy",
+      "price": 50,
+      "quantity": 100
+    },
+    {
+      "productName": "Cheese",
+      "id": 4,
+      "productCategory": "Dairy",
+      "price": 80,
+      "quantity": 70
+    },
+    {
+      "productName": "Rice",
+      "id": 5,
+      "productCategory": "Cereals",
+      "price": 64,
+      "quantity": 150
+    },
+    {
+      "productName": "Flour",
+      "id": 6,
+      "productCategory": "Cereals",
+      "price": 200,
+      "quantity": 75
+    },
+    {
+      "productName": "Pulses",
+      "id": 7,
+      "productCategory": "Cereals",
+      "price": 250,
+      "quantity": 85
+    },
+    {
+      "productName": "Millets",
+      "id": 8,
+      "productCategory": "Cereals",
+      "price": 55,
+      "quantity": 35
+    },
+    {
+      "productName": "Perfumes",
+      "id": 9,
+      "productCategory": "Cosmetics",
+      "price": 1000,
+      "quantity": 40
+    },
+    {
+      "productName": "Moisturizers",
+      "id": 10,
+      "productCategory": "Cosmetics",
+      "price": 100,
+      "quantity": 77
+    },
+    {
+      "productName": "Grooming Kits",
+      "id": 11,
+      "productCategory": "Cosmetics",
+      "price": 170,
+      "quantity": 23
+    },
+    {
+      "productName": "Pens",
+      "id": 12,
+      "productCategory": "Stationary",
+      "price": 10,
+      "quantity": 500
+    },
+    {
+      "productName": "Notebooks",
+      "id": 13,
+      "productCategory": "Stationary",
+      "price": 30,
+      "quantity": 20
+    },
+    {
+      "productName": "Biscuits",
+      "id": 14,
+      "productCategory": "Food",
+      "price": 30,
+      "quantity": 200
+    },
+    {
+      "productName": "Chocolates",
+      "id": 15,
+      "productCategory": "Food",
+      "price": 50,
+      "quantity": 100
+    },
+    {
+      "productName": "Ice-Cream",
+      "id": 16,
+      "productCategory": "Food",
+      "price": 40,
+      "quantity": 90
+    },
+    {
+      "productName": "Cars",
+      "id": 17,
+      "productCategory": "Toys",
+      "price": 850,
+      "quantity": 34
+    },
+    {
+      "productName": "Bats",
+      "id": 18,
+      "productCategory": "Toys",
+      "price": 1500,
+      "quantity": 10
+    },
+    {
+      "productName": "Ball",
+      "id": 19,
+      "productCategory": "Toys",
+      "price": 30,
+      "quantity": 65
+    }
+  ],
+
+  "login": [
+    {
+      "loginId": "Utkarsh@gmail.com",
+      "password": "utkarsh"
+    }
+  ]
+}

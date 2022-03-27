@@ -1,0 +1,35 @@
+<!-- <div class="table1">
+    <table class="table table-dark" *ngIf="suppliers && suppliers.length">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Product Category</th>
+                <th scope="col">Modify</th>
+                <th scope="col">Remove</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let supplier of suppliers;">
+                <td>{{supplier.id}}</td>
+                <td>{{supplier.name | uppercase}}</td>
+                <td>{{supplier.address}}</td>
+                <td>{{supplier.email}}</td>
+                <td>{{supplier.phoneNumber}}</td>
+                <td>{{supplier.productCategory}}</td>
+                <td><button class="btn btn-dark" (Click)="editButtonClick(supplier.id)">Edit</button></td>
+                <td><button class="btn btn-dark" (Click)="deleteButtonClick(supplier.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<br><br>
+<dx-data-grid
+    [dataSource]="suppliers"
+    keyExpr="id">
+</dx-data-grid>

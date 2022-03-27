@@ -1,0 +1,24 @@
+
+<dx-data-grid
+[dataSource]="sales"
+keyExpr="id"
+[allowColumnReordering]="true"
+[allowColumnResizing]="true"
+[showBorders]="true"
+[columnAutoWidth]="true"
+columnFixing.enabled="true"
+editing.mode ="form">
+<dxo-paging [enabled]="true"></dxo-paging>
+<dxo-editing
+mode="form"
+[allowUpdating]="true"
+[allowDeleting]="true"
+[allowAdding]="true"
+>
+</dxo-editing>
+<dxi-column dataField="productName"></dxi-column>
+<dxi-column dataField="quantity" dataType="string" [visible]="true"></dxi-column>
+<dxi-column dataField="productCategory"></dxi-column>
+<dxi-column dataField="price"></dxi-column>
+<dxi-column dataField="Net Value"[calculateCellValue]="calculateSalesAmount" ></dxi-column>
+</dx-data-grid>
