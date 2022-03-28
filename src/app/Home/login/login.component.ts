@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitButtonOptions = {
-    text: "Submit",
+    text: "Login",
     useSubmitBehavior: true
   }
 
@@ -30,8 +30,10 @@ export class LoginComponent implements OnInit {
     
     if (this.user.userId == 'utkarsh@gmail.com' && this.user.password == 'utkarsh#123'){ 
       localStorage.setItem('userType', 'admin');
+      alert("Login Successful")
     } else {
       localStorage.setItem('userType', 'guest');
+      alert("Logged in as guest")
       this.user = {
         userId: '',
         password: ''

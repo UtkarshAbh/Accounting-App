@@ -31,11 +31,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLinkActive="active" routerLink="sales">Sales</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!loggedIn()">
             <a class="nav-link active" aria-current="page" routerLinkActive="active" routerLink="login">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLinkActive="active" routerLink="login">Logout</a>
+          <li class="nav-item"*ngIf="loggedIn()">
+            <a class="nav-link active" href="#" aria-current="page" (click)="onLogout()">Logout</a>
           </li>
         </ul>
       </div>
