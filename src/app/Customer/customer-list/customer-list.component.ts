@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customer } from 'src/app/Model/customer.model';
 import { CustomerService } from 'src/app/Services/customer.service';
+import { confirm } from 'devextreme/ui/dialog'
+import { HttpClientModule, HttpParams } from '@angular/common/http';
+import { Row } from "devextreme/ui/data_grid"
+import { DxDataGridComponent } from 'devextreme-angular/ui/data-grid';
 
 @Component({
   selector: 'app-customer-list',
@@ -10,8 +14,9 @@ import { CustomerService } from 'src/app/Services/customer.service';
 })
 export class CustomerListComponent implements OnInit {
 
+
   customers: Customer[] = [];
-  customer: Customer = { 
+  customer: Customer = {
     name: '',
     id: 0,
     dateOfBirth: new Date,
@@ -25,29 +30,47 @@ export class CustomerListComponent implements OnInit {
   }
 
   constructor(private _customerService: CustomerService,
-              private _router: Router) { }
+    private _router: Router, private http: HttpClientModule) { }
 
   ngOnInit(): void {
     this._customerService.getCustomers().subscribe(
-      (listCustomers) => {this.customers = listCustomers,
-      (err: any) => console.log(err)
+      (listCustomers) => {
+        this.customers = listCustomers,
+        (err: any) => console.log(err)
       }
     )
   }
 
-
-  toggleAuth(){
-    if(localStorage.getItem('userType')== 'admin'){
+  toggleAuth() {
+    if (localStorage.getItem('userType') == 'admin') {
       return true;
     }
     return false;
   }
 
+  updatedRow(e: any) {
+    e.cancel= true;
+    const customerData = Object.assign({}, <Customer>e.data);
+    this.customer = customerData;
+    this._customerService.updateCustomer(this.customer)
 
-//  save(rowData: {id: number}, e:any) {
-   
-//    this.customer = (e.component.find((cus: Customer) => cus.id == id))
-//    this._customerService.updateCustomer(this.customer).subscribe(data => console.log(data))
-//  }
+    console.log(typeof e.data)
+  }
+
+  // updateRow(e: any) {
+  //   const isCanceled = new Promise((resolve, reject) => {
+  //     const promptPromise = confirm("Are you sure?", "Confirm changes");
+  //     promptPromise.then((dialogResult) => {
+  //       if (dialogResult) {
+  //         // this._customerService.updateCustomer()
+  //         console.log(e.changes)
+  //         return resolve(true);
+  //       } else {
+  //         return reject(true)
+  //       }
+  //     });
+  //   });
+  //   e.cancel = isCanceled;
+  // }
 
 }

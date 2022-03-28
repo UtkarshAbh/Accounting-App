@@ -2,7 +2,7 @@
     <dx-form [formData]="user">
         <dxi-item dataField="userId" [isRequired]="true"></dxi-item>
 
-        <dxi-item dataField="password" [isRequired]="true">
+        <dxi-item dataField="password"  [isRequired]="true" [editorOptions]="{mode: 'password'}">
         </dxi-item>
 
         <dxi-item itemType="button" [buttonOptions]="submitButtonOptions"></dxi-item>

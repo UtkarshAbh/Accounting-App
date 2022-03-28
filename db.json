@@ -255,8 +255,14 @@
   ],
   "login": [
     {
-      "loginId": "utkarsh@gmail.com",
-      "password": "password123"
+      "userId": "admin@gmail.com",
+      "password": "admin#123%",
+      "userType": "admin"
+    },
+    {
+      "userId": "guest@gmail.com",
+      "password": "guest#123%",
+      "userType": "guest"
     }
   ]
 }

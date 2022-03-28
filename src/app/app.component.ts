@@ -31,4 +31,11 @@ export class AppComponent {
   onLogout() {
     localStorage.clear()
   }
+
+  toggleAuth(){
+    if(localStorage.getItem('userType')){
+      return true;
+    }
+    return false;
+  }
 }

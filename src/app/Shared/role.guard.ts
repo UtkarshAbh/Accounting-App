@@ -10,7 +10,7 @@ export class RoleGuard implements CanActivate {
     if (role == 'admin') {
       return true;
     }
-    alert('Permission denied');
+    // alert('Permission denied');
     return false;
   }
   

@@ -1,43 +1,3 @@
-<!-- <div class="table1">
-    <table class="table table-dark" *ngIf="customers && customers.length">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Address</th>
-                <th scope="col">Date of Birth</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Profession</th>
-                <th scope="col">Product</th>
-                <th scope="col">Product Category</th>
-                <th scope="col">Modify</th>
-                <th scope="col">Remove</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let customer of customers;">
-                <td>{{customer.id}}</td>
-                <td>{{customer.name | uppercase}}</td>
-                <td>{{customer.gender | titlecase}}</td>
-                <td>{{customer.address}}</td>
-                <td>{{customer.dateOfBirth | date }}</td>
-                <td>{{customer.email}}</td>
-                <td>{{customer.phoneNumber}}</td>
-                <td>{{customer.profession}}</td>
-                <td>{{customer.product}}</td>
-                <td>{{customer.productCategory}}</td>
-                <td><button class="btn btn-dark" (Click)="editButtonClick(customer.id)">Edit</button></td>
-                <td><button class="btn btn-dark" (Click)="deleteButtonClick(customer.id)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
-
-<br><br>
-
 <dx-data-grid
     [dataSource]="customers"
     keyExpr="id" 
@@ -45,9 +5,12 @@
     [allowColumnResizing]="true"
     sorting.mode="single"
     paging.enabled="true"
-    [repaintChangesOnly]="true">
+ 
+    (onSaved)="updatedRow($event)"
+
+    >
     <dxo-editing
-    mode="form"
+    mode="row"
     [allowUpdating]="toggleAuth()"
     [allowDeleting]="toggleAuth()"
     >
@@ -55,7 +18,6 @@
     <dxo-paging [pageSize]="5"> </dxo-paging>
     <dxo-sorting></dxo-sorting>
     <dxi-column dataField="name"></dxi-column>
-    <dxi-column dataField="id"></dxi-column>
     <dxi-column dataField="dateOfBirth"></dxi-column>
     <dxi-column dataField="gender"></dxi-column>
     <dxi-column dataField="address"></dxi-column>
