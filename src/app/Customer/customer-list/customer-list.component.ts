@@ -57,20 +57,20 @@ export class CustomerListComponent implements OnInit {
     console.log(typeof e.data)
   }
 
-  // updateRow(e: any) {
-  //   const isCanceled = new Promise((resolve, reject) => {
-  //     const promptPromise = confirm("Are you sure?", "Confirm changes");
-  //     promptPromise.then((dialogResult) => {
-  //       if (dialogResult) {
-  //         // this._customerService.updateCustomer()
-  //         console.log(e.changes)
-  //         return resolve(true);
-  //       } else {
-  //         return reject(true)
-  //       }
-  //     });
-  //   });
-  //   e.cancel = isCanceled;
-  // }
+  updateRow(e: any) {
+    const isCanceled = new Promise((resolve, reject) => {
+      const promptPromise = confirm("Are you sure?", "Confirm changes");
+      promptPromise.then((dialogResult) => {
+        if (dialogResult) {
+          // this._customerService.updateCustomer()
+          console.log(e.changes)
+          return resolve(true);
+        } else {
+          return reject(true)
+        }
+      });
+    });
+    e.cancel = isCanceled;
+  }
 
 }

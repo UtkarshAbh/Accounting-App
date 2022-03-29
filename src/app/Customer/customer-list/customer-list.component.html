@@ -5,9 +5,7 @@
     [allowColumnResizing]="true"
     sorting.mode="single"
     paging.enabled="true"
- 
     (onSaved)="updatedRow($event)"
-
     >
     <dxo-editing
     mode="row"
@@ -18,7 +16,7 @@
     <dxo-paging [pageSize]="5"> </dxo-paging>
     <dxo-sorting></dxo-sorting>
     <dxi-column dataField="name"></dxi-column>
-    <dxi-column dataField="dateOfBirth"></dxi-column>
+    <dxi-column dataField="dateOfBirth" dataType="date"></dxi-column>
     <dxi-column dataField="gender"></dxi-column>
     <dxi-column dataField="address"></dxi-column>
     <dxi-column dataField="phoneNumber"></dxi-column>
